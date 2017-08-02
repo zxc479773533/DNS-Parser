@@ -48,6 +48,6 @@ Here is the example that the domain name `tieba.baidu.com` has been compressed:
 
 Actually, this DNS parser can get IP in the DNS packet, right?
 
-Then you can use the function in a ARPSpoof, and do some snake operate, ..., something else, ha?
+Then you can use the function in ARPSpoof, and do some snake operate, ..., something else, ha?
 
 Who cares?
