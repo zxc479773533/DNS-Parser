@@ -43,7 +43,7 @@ int DNSParser(void) {
     /* get gateway informations */
     char addr[16];
     char *name;
-    printf("Please enter your gateway informations:\n");
+    printf("Please enter your gateway's ip: (format: 0.0.0.0)\n");
     scanf("%s", addr);
     printf("\n");
 
@@ -142,7 +142,7 @@ void send_dns_request(const char *dns_name) {
 void parse_dns_response() {
 
     /* definations */
-    u_char buf[1024];
+    u_char buf[65536];
     dns_header DNS;
     char cname[128] , aname[128] , ip[20];
     u_char netip[4];
@@ -155,7 +155,7 @@ void parse_dns_response() {
     recvfrom(socketfd, buf, sizeof(buf), 0, (struct sockaddr*)&addr, &addr_len);
 
     /* parse head */
-    memcpy(buf, &DNS, 12);
+    memcpy(&DNS, buf, 12);
     u_char *p = buf + 12;
 
     /* move over questions */
@@ -171,7 +171,7 @@ void parse_dns_response() {
     }
 
     /* parse answers */
-    printf("Get Answer:\n");
+    printf("\nGet Answer:\n");
     for (count = 0; count < ntohs(DNS.num_answer); count++) {
         bzero(aname , sizeof(aname));
         len = 0;
