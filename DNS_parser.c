@@ -238,3 +238,8 @@ void parse_dns_name(u_char *buf, u_char *p, char *name, int *len) {
         }
     }
 }
+
+int main(void) {
+    DNSParser();
+    return 0;
+}
