@@ -147,7 +147,6 @@ void parse_dns_response() {
     char cname[128] , aname[128] , ip[20];
     u_char netip[4];
     struct sockaddr_in addr;
-    char *src_ip;
     u_int addr_len = sizeof(struct sockaddr_in);
     int count, len, type , ttl , data_len;
 
