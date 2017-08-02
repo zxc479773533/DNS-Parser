@@ -43,3 +43,11 @@ Here is the example that the domain name `tieba.baidu.com` has been compressed:
 ```
 | 3 | t | i | e | b | a | 0xc0 | pos of '5' before baidu |
 ```
+
+## Others
+
+Actually, this DNS parser can get IP in the DNS packet, right?
+
+Then you can use the function in a ARPSpoof, and do some snake operate, ..., something else, ha?
+
+Who cares?
