@@ -32,7 +32,7 @@ Time to alive: 90
 
 The core part is the algorithm to get the domain name in the compressing tag.
 
-A example of the domain name `www.baidu.com` in the DNS packet:
+A example that the domain name `www.baidu.com` in the DNS packet:
 
 ```
 | 3 | w | w | w | 5 | b | a | i | d | u | 3 | c | o | m | 0 |
